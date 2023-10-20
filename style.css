@@ -4,8 +4,12 @@ body {
 	line-height: 1.00em;
 	font-family: Helvetica, Arial, Sans-Serif;
 	color: #111111;
-	padding-left: 2em;
-	padding-top: 100px;
+	padding-top: 70px;
+}
+
+img {
+
+	padding-top: 0px;
 }
 
 header {
@@ -20,7 +24,8 @@ header {
 
 h1 {
 	color: #EEEEEE;
-	padding-left: 40px;
+	padding-left: 24px;
+	padding-top: 10px;
 }
 
 h2 {
@@ -28,3 +33,14 @@ h2 {
 	padding-left: 0px;
 }
 	
+a {
+	color:#EEEEEE;
+	text-decoration: none;
+}
+
+footer {
+	font-size: 80%;
+	position:relative;
+	bottom: 10;
+	left: 0;
+}
