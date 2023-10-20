@@ -12,7 +12,7 @@ img {
         font-size: 0px;
 	padding: 0px;
         display: block;
-	background-size: cover;
+	margin: 0px;
 }
 
 header {
