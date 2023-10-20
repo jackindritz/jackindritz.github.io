@@ -4,12 +4,15 @@ body {
 	line-height: 1.00em;
 	font-family: Helvetica, Arial, Sans-Serif;
 	color: #111111;
-	padding-top: 70px;
+	padding-top: 80px;
+	margin: 0px;
 }
 
 img {
-
-	padding-top: 0px;
+        font-size: 0px;
+	padding: 0px;
+        display: block;
+	background-size: cover;
 }
 
 header {
@@ -20,6 +23,7 @@ header {
 	top: 0;
 	left: 0;
 	z-index: 100;
+	margin: 0px;
 }
 
 h1 {
@@ -34,13 +38,17 @@ h2 {
 }
 	
 a {
-	color:#EEEEEE;
+	color: #EEEEEE;
 	text-decoration: none;
+}
+
+p {
+	margin-left: 10px;
 }
 
 footer {
 	font-size: 80%;
-	position:relative;
-	bottom: 10;
-	left: 0;
+	position: static;
+	margin-bottom: 10px;
+	margin-left: 10px;
 }
