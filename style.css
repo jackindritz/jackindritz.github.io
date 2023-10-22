@@ -1,5 +1,10 @@
 /*MAIN*/
 
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
 body {
 	font-size: 1.00em;
 	line-height: 1.00em;
@@ -67,4 +72,66 @@ table {
 	top: 0;
 	left: 0;
 	margin: 0px;
+}
+
+:root {
+	--bar-width: 60px;
+	--bar-height: 8px;
+	--hamburger-gap: 6px;
+	--foreground: #FF0000;
+	--background: #666666;
+	--hamburger-margin: 5px;
+	--animation-timing: 200ms ease-in-out;
+}
+
+.hamburger-menu {
+	display: flex;
+	flex-direction: column;
+	gap: var(--hamburger-gap);
+	width: max-content;
+	margin: 8px;
+	//can put position information here top and right (can use --hamburger-margin)//
+	z-index: 2;
+	cursor: pointer;
+
+}
+
+.hamburger-menu::before,
+.hamburger-menu::after,
+.hamburger-menu input {
+	content: "";
+	width: var(--bar-width);
+	height: var(--bar-height);
+	background-color: var(--foreground);
+}
+
+.hamburger-menu input {
+	appearance: none;
+	padding: 0;
+	margin: 0;
+	outline: none;
+	pointer-events: none;
+}
+
+.hamburger-menu:has(input:checked)::before {
+
+}
+
+.hamburger-menu input:checked {
+	background: #0000FF;
+}
+
+.sidebar {
+	transition: translate var(--animation-timing);
+	translate: -100%;
+	padding-left: 0.5rem;
+	padding-top: calc(var(--hamburger-height) + var(--hamburger-margin));
+	color: var(--background);
+	background-color: var(--foreground);
+	max-width: 10rem;
+	min-height: 100vh;
+}
+
+.hamburger-menu:has(input:checked) + .sidebar {
+	translate: 0;
 }
