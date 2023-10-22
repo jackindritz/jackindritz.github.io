@@ -1,4 +1,10 @@
 /*MAIN*/
+
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
 body {
 	font-size: 1.00em;
 	line-height: 1.00em;
@@ -9,46 +15,61 @@ body {
 }
 
 img {
-        font-size: 0px;
 	padding: 0px;
         display: block;
 	margin: 0px;
 }
 
 header {
-	background: #326128;
+	background-image: linear-gradient(#2b7029, #315928);
 	width: 100%;
 	height: 80px;
 	position: fixed;
 	top: 0;
 	left: 0;
-	z-index: 100;
 	margin: 0px;
+	text-align: left;
 }
 
 h1 {
-	color: #EEEEEE;
-	padding-left: 24px;
-	padding-top: 10px;
+	color: #FFFFFF;
+	padding-left: 22px;
+	padding-top: 15px;
+	text-align: left;
+	font-size: 1.95em;
 }
 
 h2 {
-	color: #000000;
-	padding-left: 0px;
+	color: #FFFFFF;
+	padding-right: 22px;
+	padding-top: 14px;
+	text-align: right;
+	font-size: 1.95em;
 }
-	
+
 a {
-	color: #EEEEEE;
 	text-decoration: none;
+	color: #EEEEEE;
 }
 
 p {
-	margin-left: 10px;
+	margin: 15px;
 }
 
 footer {
-	font-size: 80%;
+	font-size: .80em;
 	position: static;
 	margin-bottom: 10px;
 	margin-left: 10px;
+}
+
+table {
+	width: 100%;
+	text-align: left;
+	margin: 0px;
+	padding: 0px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	margin: 0px;
 }
