@@ -1,10 +1,5 @@
 /*MAIN*/
 
-*::after,
-*::before {
-	box-sizing: border-box;
-}
-
 body {
 	font-size: 1.00em;
 	line-height: 1.00em;
