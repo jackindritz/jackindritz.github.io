@@ -1,5 +1,9 @@
 /*MAIN*/
 
+:root {
+	//--varname: var(--varname);
+}
+
 *::after,
 *::before {
 	box-sizing: border-box;
@@ -76,20 +80,12 @@ footer {
 	margin-left: 10px;
 }
 
-:root {
-	--bar-width: 25px;
-	--bar-height: 4px;
-	--hamburger-gap: 5px;
-	--foreground: #EEEEEE;
-	--background: #316028;
-	--hamburger-margin: 0px;
-	--animation-timing: 200ms ease-in-out;
-}
 
-.hamburger-menu {
+
+.bmenu {
 	display: flex;
 	flex-direction: column;
-	gap: var(--hamburger-gap);
+	gap: 5px;
 	width: max-content;
 	cursor: pointer;
 	margin-top: 5px;
@@ -97,16 +93,16 @@ footer {
 	margin-right: 20px;
 }
 
-.hamburger-menu::before,
-.hamburger-menu::after,
-.hamburger-menu input {
+.bmenu::before,
+.bmenu::after,
+.bmenu input {
 	content: "";
-	width: var(--bar-width);
-	height: var(--bar-height);
-	background-color: var(--foreground);
+	width: 25px;
+	height: 4px;
+	background-color: #EEEEEE;
 }
 
-.hamburger-menu input {
+.bmenu input {
 	appearance: none;
 	padding: 0;
 	margin: 0;
@@ -114,18 +110,18 @@ footer {
 	pointer-events: none;
 }
 
-.hamburger-menu:has(input:checked)::before {
+.bmenu:has(input:checked)::before {
 
 }
 
-.hamburger-menu input:checked {
+.bmenu input:checked {
 	//background: #0000FF;
 }
 
 .sidebar {
 	position: relative;
 	float:right;
-	transition: translate var(--animation-timing);
+	transition: translate 200ms ease-in-out;
 	translate: 130%;
 	padding-left: 18px;
 	padding-top: 0px;
@@ -136,7 +132,7 @@ footer {
 	top: 48px;
 }
 
-.hamburger-menu:has(input:checked) + .sidebar {
+.bmenu:has(input:checked) + .sidebar {
 	translate: 45px;
 }
 
@@ -145,7 +141,7 @@ footer {
 .sidebar {
 	top: 15px;
 }
-.hamburger-menu:has(input:checked) + .sidebar {
+.bmenu:has(input:checked) + .sidebar {
 	translate: 0px;
 }
 }
